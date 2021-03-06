@@ -1,0 +1,24 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">投稿する</h1>
+     <div class="form">
+      <div class="form-body">
+      　
+      <% @post.errors.full_messages.each do |message| %>
+       　 <div class="form-error">
+       　   <%= message %>  
+       　 </div>
+    　<% end %>
+    　<%= form_with model: @post, url: posts_create_path do |f| %>
+          <%= f.hidden_field :user_id, value: @current_user.id %>
+          <%= f.collection_select :area_id, Area.all, :id, :name, :prompt =>"地域を選択" %>
+          <%= f.collection_select :timeframe_id, Timeframe.all, :id, :name, :prompt =>"時間帯を選択" %>
+          <%= f.text_area :content %>
+          <%= f.submit "投稿" %>
+    　<% end %>
+
+      </div>
+     </div> 
+    
+  </div>
+</div>
