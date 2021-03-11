@@ -4,7 +4,7 @@
     <title>SanpoApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -33,9 +33,12 @@
             <%= link_to("ユーザー一覧", "/users/index") %>
           </li>
           <li>
-            <%= link_to("ログアウト", "/logout", {method: :post}) %>
-            
+            <%= link_to("エリア一覧", "/areas/index") %>
           </li>
+          <li>
+            <%= link_to("ログアウト", "/logout", {method: :post}) %>
+          </li>
+          
        <% else %>
           <li>
             <%= link_to("SanpoAppとは", "/about") %>

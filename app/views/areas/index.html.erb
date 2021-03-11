@@ -1,0 +1,10 @@
+<div class="main areas-index">
+  <div class="container">
+    <h1 class="areas-heading">エリア一覧</h1>
+    <% @areas.each do |area|%>
+      <div class="areas-index-item">
+          <%= link_to(area.name, "/areas/#{area.id}") %>
+      </div>
+    <% end %>
+  </div>
+</div>

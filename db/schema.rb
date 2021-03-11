@@ -42,7 +42,5 @@ ActiveRecord::Schema.define(version: 2021_02_28_164921) do
     t.string "image_name"
     t.string "picture_name"
   end
-  
-  
 
 end

@@ -24,7 +24,11 @@
   .post-user-name a:hover {
     color: #3ecdc6;
   }
+  .post-area-name {
+    font-weight: 15px;
+  }
   
+
   .post-left {
     float: left;
     width: 10%;
@@ -83,6 +87,7 @@
     text-decoration: underline;
     font-size: 14px;
   }
+  
   
   /* posts/new ================================ */
   .posts-new textarea {

@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'areas/index' => "areas#index"
+  get 'areas/:id' => "areas#show"
 
   get 'login' => "users#login_form"
   post 'login' => "users#login"
   post 'logout' => "users#logout"
-
+  
   get 'posts/index' => "posts#index"
   get 'posts/new' => "posts#new"
   get 'posts/:id' => "posts#show"

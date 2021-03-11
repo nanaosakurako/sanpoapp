@@ -53,6 +53,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:user_id, :area_id, :timeframe_id, :content)
   end
-	
-	
+
 end
